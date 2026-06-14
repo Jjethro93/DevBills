@@ -1,0 +1,104 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2025-04-11T00:00:00.000Z",
+    "__export_source": "devbills-fastify-api",
+    "resources": [
+      {
+        "_id": "wrk_devbills_project",
+        "created": 1680000000000,
+        "description": "Projeto DevBills - API com Fastify",
+        "modified": 1680000000000,
+        "name": "DevBills",
+        "type": "workspace",
+        "_type": "workspace"
+      },
+      {
+        "_id": "env_devbills_base",
+        "created": 1680000000001,
+        "name": "Base Environment",
+        "data": {
+          "base_url": "http://localhost:3333/api",
+          "token": "<COLE_SEU_TOKEN_AQUI>"
+        },
+        "parentId": "wrk_devbills_project",
+        "_type": "environment"
+      },
+  
+      {
+        "_id": "req_get_categories",
+        "name": "📁 GET - Categorias",
+        "method": "GET",
+        "url": "{{ base_url }}/categories",
+        "headers": [],
+        "parentId": "wrk_devbills_project",
+        "_type": "request"
+      },
+  
+      {
+        "_id": "req_user_info",
+        "name": "👤 GET - User Info",
+        "method": "GET",
+        "url": "{{ base_url }}/users/info",
+        "headers": [
+          { "name": "Authorization", "value": "Bearer {{ token }}" }
+        ],
+        "parentId": "wrk_devbills_project",
+        "_type": "request"
+      },
+  
+      {
+        "_id": "req_create_transaction",
+        "name": "💸 POST - Nova Transação",
+        "method": "POST",
+        "url": "{{ base_url }}/transactions",
+        "headers": [
+          { "name": "Content-Type", "value": "application/json" },
+          { "name": "Authorization", "value": "Bearer {{ token }}" }
+        ],
+        "body": {
+          "mimeType": "application/json",
+          "text": "{\n  \"description\": \"Mercado\",\n  \"amount\": 200.50,\n  \"date\": \"2025-04-01T00:00:00.000Z\",\n  \"categoryId\": \"<ID_DA_CATEGORIA>\",\n  \"type\": \"expense\"\n}"
+        },
+        "parentId": "wrk_devbills_project",
+        "_type": "request"
+      },
+  
+      {
+        "_id": "req_get_transactions",
+        "name": "📜 GET - Lista de Transações",
+        "method": "GET",
+        "url": "{{ base_url }}/transactions?month=4&year=2025",
+        "headers": [
+          { "name": "Authorization", "value": "Bearer {{ token }}" }
+        ],
+        "parentId": "wrk_devbills_project",
+        "_type": "request"
+      },
+  
+      {
+        "_id": "req_delete_transaction",
+        "name": "🗑️ DELETE - Excluir Transação",
+        "method": "DELETE",
+        "url": "{{ base_url }}/transactions/<ID_DA_TRANSACTION>",
+        "headers": [
+          { "name": "Authorization", "value": "Bearer {{ token }}" }
+        ],
+        "parentId": "wrk_devbills_project",
+        "_type": "request"
+      },
+  
+      {
+        "_id": "req_transaction_summary",
+        "name": "📊 GET - Resumo de Transações",
+        "method": "GET",
+        "url": "{{ base_url }}/transactions/summary?month=4&year=2025",
+        "headers": [
+          { "name": "Authorization", "value": "Bearer {{ token }}" }
+        ],
+        "parentId": "wrk_devbills_project",
+        "_type": "request"
+      }
+    ]
+  }
+  
