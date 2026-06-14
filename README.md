@@ -28,13 +28,20 @@ TypeScript
 Firebase Authentication
 Firestore Database
 Zod
+
+<br></br>
+
+
+
 📸 Preview
 
 Dashboard
+<br/>
 <img src="./previews/Inicio.jpg" width="400px">
 <img src="./previews/dashboard.jpg" width="400px">
 
 Transações
+<br/>
 <img src="./previews/transacoes.jpg" width="400px">
 <img src="./previews/novatransacao.jpg" width="400px">
 
