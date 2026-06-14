@@ -31,12 +31,12 @@ Zod
 📸 Preview
 
 Dashboard
-<img src="./previews/Inicio.jpg" width="100px">
-<img src="./previews/dashboard.jpg">
+<img src="./previews/Inicio.jpg" width="400px">
+<img src="./previews/dashboard.jpg" width="400px">
 
 Transações
-<img src="./previews/transacoes.jpg">
-<img src="./previews/novatransacao.jpg">
+<img src="./previews/transacoes.jpg" width="400px">
+<img src="./previews/novatransacao.jpg" width="400px">
 
 
 
