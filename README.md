@@ -31,7 +31,7 @@ Zod
 📸 Preview
 
 Dashboard
-<img src="./previews/Inicio.jpg">
+<img src="./previews/Inicio.jpg" style={{width="50px" height="50px"}}>
 <img src="./previews/dashboard.jpg">
 
 Transações
